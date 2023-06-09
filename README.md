@@ -4,7 +4,9 @@
     - Choose between 5 and 15 characters
     - Include numbers and symbols
 ## What I learned / practiced
-- Practiced randomization with the characters and the amount of each type of character.
-## Tools Used
+- Practiced randomization with 
+    - the characters and 
+    - the amount of each type of character.
+## Tools and Technologies Used
 - Javascript
 - [ColorHunt](https://colorhunt.co) (for color scheme)
