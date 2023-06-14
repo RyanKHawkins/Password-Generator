@@ -54,6 +54,7 @@ main {
     justify-content: center;
     align-items: center;
     user-select: text;
+    letter-spacing: .25em;
 }
 
 ::selection {
