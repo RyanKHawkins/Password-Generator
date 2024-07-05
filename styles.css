@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(103, 93, 80);
+    color: black
     user-select: none;
 }
 :root {
@@ -41,7 +41,13 @@ main {
 #generator {
     text-align: center;
 }
+#password-button {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: calc(var(--radius) / 2);
+}
 #password-display {
+    margin-top: 2.5px;
     border: 1px solid var(--black);
     border-radius: calc(var(--radius) / 2);
     background-color: rgb(171, 196, 170);
@@ -55,6 +61,9 @@ main {
     align-items: center;
     user-select: text;
     letter-spacing: .25em;
+}
+#password-display:hover {
+    transform: scale(1.05)
 }
 
 ::selection {
