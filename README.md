@@ -7,7 +7,7 @@
     - Choose between 5 and 15 characters
     - Include numbers and symbols
 ## What I learned / practiced
-- Practiced randomization with the characters and the amount of each type of character.
+- Practiced randomization with the characters and to determine the amount of each type of character.
 ## Tools and Technologies
 - Javascript
 - HTML/CSS
