@@ -1,6 +1,6 @@
 # Password-Generator
 
-![image](https://github.com/RyanKHawkins/Password-Generator/assets/50811019/3cbb948c-a358-4d38-bb64-21ee28cd00b0)
+![image](https://github.com/user-attachments/assets/88901fb1-4543-4b32-8ff2-45bb32d16b00)
 
 ## Description
 - Password generator that gives the user the following options:
