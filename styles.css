@@ -38,6 +38,15 @@ main {
     align-items: center;
     gap: 15px;
 }
+#selector-container {
+    margin-top: 15px;
+    /* text-align: left; */
+    display: flex;
+    flex-direction: column;
+}
+#selector-container input {
+    text-align: center;
+}
 #generator {
     text-align: center;
 }
