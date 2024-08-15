@@ -12,7 +12,7 @@ lengthSelector.addEventListener("input", (e) => {
         +lengthSelector.max
     );
 });
-[numberSelector, symbolSelector, passwordButton].forEach((selector) => {
+[numberSelector, symbolSelector, passwordButton, lengthSelector].forEach((selector) => {
     selector.addEventListener("click", generatePassword);
 });
 function clampValues(val, min, max) {
@@ -23,10 +23,6 @@ function clampValues(val, min, max) {
         val = max;
     }
     return val;
-
-    // val = val >= min && val <= max
-    //     ? val : val < min
-    //     ? min : max;
 }
 
 function displayPassword(password) {
@@ -44,6 +40,7 @@ function generatePassword() {
         Math.ceil(remaining / 4),
         Math.ceil(remaining / 3)
     );
+
     remaining -= letterCount;
 
     let digitCount = numberSelector.checked
@@ -86,15 +83,7 @@ function generatePassword() {
 
     displayPassword(password);
 }
+
 function getRandomInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-// window.addEventListener("load", () => {
-//     let genPassIntro = setInterval(() => {
-//         generatePassword();
-//     }, 100);
-//     setTimeout(() => {
-//         clearInterval(genPassIntro);
-//     }, 1000);
-// });
