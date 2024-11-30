@@ -33,8 +33,8 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const digits = "0123456789";
 const symbols = "!@#$%^&";
 function generatePassword() {
-    const passLen = lengthSelector.value;
-    let remaining = passLen;
+    const pswdLength = lengthSelector.value;
+    let remaining = pswdLength;
 
     let letterCount = getRandomInRange(
         Math.ceil(remaining / 4),
