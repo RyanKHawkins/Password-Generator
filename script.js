@@ -5,16 +5,19 @@ const symbolSelector = document.querySelector("#use_symbol");
 const numberSelector = document.querySelector("#use_num");
 
 lengthSelector.addEventListener("input", (e) => {
-    console.log("changed password length to", e.target.value);
     e.target.value = clampValues(
         e.target.value,
         +lengthSelector.min,
         +lengthSelector.max
     );
 });
-[numberSelector, symbolSelector, passwordButton, lengthSelector].forEach((selector) => {
+
+[numberSelector, symbolSelector, passwordButton].forEach((selector) => {
     selector.addEventListener("click", generatePassword);
 });
+
+lengthSelector.addEventListener("change", generatePassword);
+
 function clampValues(val, min, max) {
     if (val < min) {
         val = min;
@@ -53,7 +56,7 @@ function generatePassword() {
         : 0;
     remaining -= symbolCount;
 
-    console.log("letterCount:", letterCount, "remaining:", remaining);
+    // console.log("letterCount:", letterCount, "remaining:", remaining);
 
     let additionalDigits = numberSelector.checked
         ? Math.floor(remaining / 2)
@@ -62,7 +65,7 @@ function generatePassword() {
     digitCount += additionalDigits;
     remaining -= additionalDigits;
     letterCount += remaining;
-    console.log("type counts (l,d,s):", letterCount, digitCount, symbolCount);
+    // console.log("type counts (l,d,s):", letterCount, digitCount, symbolCount);
 
     let password = "";
     for (let i = 0; i < letterCount; i++) {
