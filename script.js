@@ -17,6 +17,7 @@ lengthSelector.addEventListener("input", (e) => {
 });
 
 lengthSelector.addEventListener("change", generatePassword);
+passwordDisplay.addEventListener("click", copyPassword);
 
 function clampValues(val, min, max) {
     if (val < min) {
@@ -89,4 +90,11 @@ function generatePassword() {
 
 function getRandomInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function copyPassword() {
+    let password = passwordDisplay.innerText;
+    navigator.clipboard.writeText(password);
+    displayPassword("copied...");
+    setTimeout(() => {displayPassword(password)}, 250);
 }
